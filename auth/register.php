@@ -5,7 +5,7 @@ include "includes/functions.php";
 
 $method = $_SERVER['REQUEST_METHOD'] ?? '';
 
-if($method == "POST"){
+if($method === "POST"){
 
     $nome = trim($_POST['nome'] ?? '');
     $email = trim($_POST['email'] ?? '');
@@ -49,3 +49,4 @@ $stmt = $conn->prepare($sql);
 else{
     jsonReturn(["erro" => "Método inválido."], 405);
 }
+?>
