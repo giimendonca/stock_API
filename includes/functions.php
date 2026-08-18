@@ -35,3 +35,22 @@ function verificarToken($conn){
 
     return $usuario;
 }
+
+function getTodos($conn, $table){
+    $sql = "SELECT * FROM $table";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+
+    return $stmt->get_result();
+}
+
+function getId($conn, $table, $id){
+    $sql = "SELECT * FROM $table WHERE id = ?";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+    return $stmt->get_result();
+}
