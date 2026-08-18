@@ -1,7 +1,7 @@
 <?php
 header("Content-type: application/json");
-include "../../includes/conn.php";
-include "../../includes/functions.php";
+include "../includes/conn.php";
+include "../includes/functions.php";
 
 $method = $_SERVER['REQUEST_METHOD'] ?? '';
 

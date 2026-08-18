@@ -3,6 +3,8 @@ header("Content-Type: application/json");
 include "../includes/conn.php";
 include "../includes/functions.php";
 
+$usuario = verificarToken($conn);
+
 $method = $_SERVER['REQUEST_METHOD'] ?? '';
 $id = $_GET['id'] ?? '';
 
