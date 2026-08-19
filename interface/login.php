@@ -37,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         header("Location: index.php");
         exit;
-
     } else {
 
         $erro =
@@ -58,68 +57,74 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+        content="width=device-width, initial-scale=1.0">
 
     <title>Login · StockAPI</title>
 
     <link
         rel="stylesheet"
-        href="../assets/css/style.css"
-    >
+        href="../assets/css/style.css">
 
 </head>
 
 <body class="login-page">
 
-<div class="login-card">
+    <div class="login-card">
 
-    <div class="login-logo">
-        <span>Stock</span>API
-    </div>
-
-    <p class="login-subtitle">
-        Sistema de gerenciamento de estoque
-    </p>
-
-    <?php if ($erro): ?>
-
-        <div class="alert error">
-            <?= htmlspecialchars($erro) ?>
+        <div class="login-logo">
+            <span>Stock</span>API
         </div>
 
-    <?php endif; ?>
+        <p class="login-subtitle">
+            Sistema de gerenciamento de estoque
+        </p>
+
+        <?php if ($erro): ?>
+
+            <div class="alert error">
+                <?= htmlspecialchars($erro) ?>
+            </div>
+
+        <?php endif; ?>
 
 
-    <form method="POST">
+        <form method="POST">
 
-        <label>Email</label>
+            <label>Email</label>
 
-        <input
-            type="email"
-            name="email"
-            required
-            placeholder="seu@email.com"
-        >
-
-
-        <label>Senha</label>
-
-        <input
-            type="password"
-            name="senha"
-            required
-            placeholder="••••••••"
-        >
+            <input
+                type="email"
+                name="email"
+                required
+                placeholder="seu@email.com">
 
 
-        <button class="btn primary">
-            Entrar
-        </button>
+            <label>Senha</label>
 
-    </form>
+            <input
+                type="password"
+                name="senha"
+                required
+                placeholder="••••••••">
 
-</div>
+
+            <button class="btn primary">
+                Entrar
+            </button>
+
+        </form>
+
+        <p style="margin-top: 20px;">
+
+            Ainda não possui uma conta?
+
+            <a href="register.php">
+                Cadastrar
+            </a>
+
+        </p>
+
+    </div>
 
 </body>
 
