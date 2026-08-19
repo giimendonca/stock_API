@@ -4,7 +4,7 @@ session_start();
 
 define(
     "API_URL",
-    "http://localhost/stockApi"
+    "http://localhost/stock_API"
 );
 
 
@@ -46,11 +46,23 @@ function consumirAPI($endpoint, $method = "GET", $dados = [])
 
     if (!empty($dados)) {
 
-        $opcoes[CURLOPT_POSTFIELDS] = http_build_query($dados);
+    if ($method === "PUT") {
+
+        $opcoes[CURLOPT_POSTFIELDS] =
+            json_encode($dados);
+
+        $headers[] =
+            "Content-Type: application/json";
+
+    } else {
+
+        $opcoes[CURLOPT_POSTFIELDS] =
+            http_build_query($dados);
 
         $headers[] =
             "Content-Type: application/x-www-form-urlencoded";
     }
+}
 
 
     $opcoes[CURLOPT_HTTPHEADER] = $headers;

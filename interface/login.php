@@ -1,13 +1,10 @@
 <?php
-
-session_start();
+require_once "includes/api.php";
 
 if (!empty($_SESSION['token'])) {
     header("Location: index.php");
     exit;
 }
-
-require_once "includes/api.php";
 
 $erro = "";
 
@@ -68,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <link
         rel="stylesheet"
-        href="assets/css/style.css"
+        href="../assets/css/style.css"
     >
 
 </head>

@@ -30,7 +30,7 @@ $pagina = basename($_SERVER['PHP_SELF']);
 
     <link
         rel="stylesheet"
-        href="assets/css/style.css"
+        href="../assets/css/style.css"
     >
 
 </head>
