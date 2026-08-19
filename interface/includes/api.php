@@ -4,7 +4,7 @@ session_start();
 
 define(
     "API_URL",
-    "http://localhost/stock_API"
+    "http://localhost/stock_API/api"
 );
 
 
