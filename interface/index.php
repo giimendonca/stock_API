@@ -5,11 +5,11 @@ require_once "includes/api.php";
 include "includes/header.php";
 
 
-$produtos = consumirAPI("/api/produtos.php");
+$produtos = consumirAPI("/produtos.php");
 
-$categorias = consumirAPI("/api/categorias.php");
+$categorias = consumirAPI("/categorias.php");
 
-$movimentacoes = consumirAPI("/api/movimentacoes.php");
+$movimentacoes = consumirAPI("/movimentacoes.php");
 
 
 $listaProdutos = $produtos['dados'] ?? [];

@@ -9,7 +9,7 @@ $erro = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $resposta = consumirAPI(
-        "/api/movimentacoes.php",
+        "/movimentacoes.php",
         "POST",
         $_POST
     );
@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 
-$produtos = consumirAPI("/api/produtos.php");
-$movimentacoes = consumirAPI("/api/movimentacoes.php");
+$produtos = consumirAPI("/produtos.php");
+$movimentacoes = consumirAPI("/movimentacoes.php");
 
 $listaProdutos = $produtos['dados'] ?? [];
 $listaMovimentacoes = $movimentacoes['dados'] ?? [];

@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nome = trim($_POST['nome'] ?? '');
 
         $resposta = consumirAPI(
-            "/api/categorias.php",
+            "/categorias.php",
             "POST",
             [
                 "nome" => $nome

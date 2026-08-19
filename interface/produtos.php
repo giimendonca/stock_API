@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
         $resposta = consumirAPI(
-            "/api/produtos.php",
+            "/produtos.php",
             "POST",
             $dados
         );
@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
         $resposta = consumirAPI(
-            "/api/produtos.php?id=" . $id,
+            "/produtos.php?id=" . $id,
             "PUT",
             $dados
         );
@@ -171,7 +171,7 @@ if (
 
 
     $resposta = consumirAPI(
-        "/api/produtos.php?id=" . $id,
+        "/produtos.php?id=" . $id,
         "DELETE"
     );
 
@@ -213,7 +213,7 @@ if ($modoEdicao) {
 
 
     $respostaEditar = consumirAPI(
-        "/api/produtos.php?id=" . $idEditar
+        "/produtos.php?id=" . $idEditar
     );
 
 
@@ -243,12 +243,12 @@ BUSCAR PRODUTOS
 */
 
 $respostaProdutos = consumirAPI(
-    "/api/produtos.php"
+    "/produtos.php"
 );
 
 
 $respostaCategorias = consumirAPI(
-    "/api/categorias.php"
+    "/categorias.php"
 );
 
 
